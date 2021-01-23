@@ -1,5 +1,4 @@
 import folium
-import pandas
 import os
 import requests
 import json
