@@ -89,7 +89,7 @@ for pubtime, time, city, scale, coodinate in zip(earthquake_publish_time, earthq
 
 # 都道府県の境線を一つのレーヤとしてグループを作成：
 layer_fg = folium.FeatureGroup(name= "都道府県別日本地図")
-layer_fg.add_child(folium.GeoJson(data=(open('Main/japan.geojson' ,'r', encoding='UTF-8').read())))
+layer_fg.add_child(folium.GeoJson(data=(open('japan.geojson' ,'r', encoding='UTF-8').read())))
 
 
 japan.add_child(volcano_fg)
