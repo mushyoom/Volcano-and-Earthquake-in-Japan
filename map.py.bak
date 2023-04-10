@@ -24,7 +24,7 @@ japan = folium.Map([36,138],zoom_start=6,tiles='Stamen Terrain')
 volcano = requests.get("https://gbank.gsj.jp/quatigneous/api/volcano")
 volcano_data = json.loads(volcano.content.decode('utf-8'))
 
-print((volcano_data["features"][0]))
+print(volcano_data["features"][0])
 
 # vlist = [i for i in volcano_data.features]
 vlist = [i for i in volcano_data["features"]]
@@ -49,8 +49,8 @@ for data in dict_earthquake_data:
     if(data["code"] == 551):
         if(data['earthquake']['hypocenter']['latitude'][1:] == '' or data['earthquake']['hypocenter']['longitude'][1:] == ''):
             print("下記のデータには不備がありました：")
-            print((dict_earthquake_data.index(data))) 
-            print(( dict_earthquake_data[dict_earthquake_data.index(data)]))
+            print(dict_earthquake_data.index(data)) 
+            print( dict_earthquake_data[dict_earthquake_data.index(data)])
         else:
             # print([data['earthquake']['hypocenter']['latitude'][1:],data['earthquake']['hypocenter']['longitude'][1:]])
             index = dict_earthquake_data.index(data)
