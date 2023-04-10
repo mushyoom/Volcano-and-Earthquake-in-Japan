@@ -6,7 +6,7 @@ idna==2.10
 Jinja2==2.11.2
 MarkupSafe==1.1.1
 numpy==1.19.5
-python-dateutil==3.10.0
+python-dateutil>=2.4.0,<3.11.0
 pytz==2020.5
 requests==2.25.1
 six==1.15.0
